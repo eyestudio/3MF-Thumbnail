@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6CB4EE"/>
+      <stop offset="100%" stop-color="#3A7BD5"/>
+    </linearGradient>
+
+    <linearGradient id="cubeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#E8EDF2" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cubeLeft" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8D6E0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#DAE3EB" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="cubeRight" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#A8BCCB" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#BFCDD8" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="#1a3a5c" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background: macOS icon shape with padding and rounded corners -->
+  <rect x="100" y="100" width="824" height="824" rx="185" ry="185" fill="url(#bgGrad)"/>
+
+  <!-- 3D Cube centered in icon area -->
+  <g filter="url(#shadow)" transform="translate(512, 485)">
+    <!-- Top face -->
+    <polygon points="0,-240 264,-108 0,24 -264,-108" fill="url(#cubeTop)"/>
+    <!-- Left face -->
+    <polygon points="-264,-108 0,24 0,288 -264,156" fill="url(#cubeLeft)"/>
+    <!-- Right face -->
+    <polygon points="264,-108 0,24 0,288 264,156" fill="url(#cubeRight)"/>
+
+    <!-- Wireframe edges -->
+    <g stroke="#3A7BD5" stroke-width="2.5" stroke-opacity="0.3" fill="none" stroke-linejoin="round">
+      <polygon points="0,-240 264,-108 0,24 -264,-108"/>
+      <polygon points="-264,-108 0,24 0,288 -264,156"/>
+      <polygon points="264,-108 0,24 0,288 264,156"/>
+    </g>
+
+    <!-- Grid lines on top face -->
+    <g stroke="#3A7BD5" stroke-width="1.5" stroke-opacity="0.15">
+      <line x1="-132" y1="-174" x2="132" y2="-42"/>
+      <line x1="-88" y1="-152" x2="176" y2="-20"/>
+      <line x1="88" y1="-196" x2="-176" y2="-64"/>
+      <line x1="176" y1="-152" x2="-88" y2="-20"/>
+    </g>
+  </g>
+</svg>
