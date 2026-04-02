@@ -2,6 +2,8 @@
 
 A macOS Quick Look plugin that adds Finder thumbnails and 3D model preview for `.3mf` (3D Manufacturing Format) files.
 
+![Screenshot](Screenshot.jpeg)
+
 ## Features
 
 - **Finder Thumbnails** — See 3MF file previews directly in Finder
